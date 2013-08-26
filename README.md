@@ -12,10 +12,10 @@ Features
 There are currently only two (2) features, but they're the features you want.
 
 * Syntax highlighting for *.yuml files.
-![Syntax Highlighting](https://raw.github.com/cluther/sublime-yuml/master/images/syntax_highlighting.png)
+![Syntax Highlighting](https://raw.github.com/cluther/sublime-yuml/develop/images/syntax_highlighting.png)
 
 * Open image for diagram in browser.
-![Open Diagram in Browser](https://raw.github.com/cluther/sublime-yuml/master/images/open_diagram_in_browser.png)
+![Open Diagram in Browser](https://raw.github.com/cluther/sublime-yuml/develop/images/open_diagram_in_browser.png)
 
 
 Install with Package Control
