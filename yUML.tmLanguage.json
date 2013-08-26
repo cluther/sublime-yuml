@@ -1,0 +1,29 @@
+{
+    "name": "yUML",
+    "scopeName": "source.yuml",
+    "fileTypes": ["yuml"],
+    "patterns": [{
+        "name": "comment.line",
+        "match": "^(//.*$)"
+    },{
+        "match": "(\\[)([^\\{\\]]+)((\\{)([^\\:]+)(\\:)([^\\}]+)(\\}))?(\\])",
+        "captures": {
+            "1": {"name": "punctuation.definition.string.begin"},
+            "2": {"name": "entity.name.tag.css"},
+            "4": {"name": "punctuation.section.property-list.css"},
+            "5": {"name": "meta.property-name.css"},
+            "6": {"name": "punctuation.separator.key-value.css"},
+            "7": {"name": "meta.property-value.css"},
+            "8": {"name": "punctuation.section.property-list.css"},
+            "9": {"name": "punctuation.definition.string.end"},
+        },
+    },{
+        "match": "(([<>\\*+\\^\\d\\.]*)([\\.\\-]+)([<>\\*+\\^\\d\\.]*))",
+        "captures": {
+            "1": {"name": "meta.association.yuml"},
+            "2": {"name": "keyword.operator.class.yuml"},
+            "3": {"name": "keyword.yuml"},
+            "4": {"name": "keyword.operator.class.yuml"}
+        }
+    }]
+}

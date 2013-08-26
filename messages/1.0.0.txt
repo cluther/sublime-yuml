@@ -1,0 +1,20 @@
+yUML 1.0.0 Changelog:
+
+This is the first release of yUML for Sublime Text. Both ST2 and ST3 should be
+supported, but only ST3 has been tested.
+
+New Features
+ - yUML syntax definition to add syntax highlighting to your *.yuml files.
+
+ - New command: "yUML: Open Diagram in Browser". Opens a tab in your default
+   browser to a http://yuml.me/ page showing the diagram defined in your buffer.
+
+ - New command: "Preferences: yUML Settings – Default". Opens yUML default
+   settings file.
+
+ - New command: "Preferences: yUML Settings - User". Opens yUML user settings
+   file.
+
+ - New menu: "Preferences / Package Settings / yUML". Menu items for "README",
+   "Settings - Default", "Settings - User", "Key Bindings - Default" and
+   "Key Bindings - User".

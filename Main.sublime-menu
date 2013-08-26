@@ -1,0 +1,70 @@
+[{
+	"id": "preferences",
+	"children": [{
+		"caption": "Package Settings",
+		"mnemonic": "P",
+		"id": "package-settings",
+		"children": [{
+			"caption": "yUML",
+			"children": [{
+				"caption": "README",
+				"command": "open_file",
+				"args": {"file": "${packages}/yUML/README.md"}
+			},{
+				"caption": "-"
+			},{
+			    "caption": "Settings - Default",
+			    "command": "open_file",
+			    "args": {"file": "${packages}/yUML/yUML.sublime-settings"}
+			},{
+			    "caption": "Settings – User",
+			    "command": "open_file",
+			    "args": {"file": "${packages}/User/yUML.sublime-settings"}
+			},{
+				"caption": "-"
+			},{
+			    "caption": "Key Bindings – Default",
+			    "command": "open_file",
+			    "args": {
+			        "file": "${packages}/yUML/Default (Windows).sublime-keymap",
+			        "platform": "Windows"
+			    }
+			},{
+			    "caption": "Key Bindings – Default",
+			    "command": "open_file",
+			    "args": {
+			        "file": "${packages}/yUML/Default (OSX).sublime-keymap",
+			        "platform": "OSX"
+			    }
+			},{
+			    "caption": "Key Bindings – Default",
+			    "command": "open_file",
+			    "args": {
+			        "file": "${packages}/yUML/Default (Linux).sublime-keymap",
+			        "platform": "Linux"
+			    }
+			},{
+			    "caption": "Key Bindings – User",
+			    "command": "open_file",
+			    "args": {
+			        "file": "${packages}/User/Default (Windows).sublime-keymap",
+			        "platform": "Windows"
+			    }
+			},{
+			    "caption": "Key Bindings – User",
+			    "command": "open_file",
+			    "args": {
+			        "file": "${packages}/User/Default (OSX).sublime-keymap",
+			        "platform": "OSX"
+			    }
+			},{
+			    "caption": "Key Bindings – User",
+			    "command": "open_file",
+			    "args": {
+			        "file": "${packages}/User/Default (Linux).sublime-keymap",
+			        "platform": "Linux"
+			    }
+			}]
+		}]
+	}]
+}]
