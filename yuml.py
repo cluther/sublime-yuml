@@ -23,6 +23,7 @@ It's makes it really easy for you to:
 
 import sublime
 import sublime_plugin
+import urllib
 import webbrowser
 
 
@@ -37,6 +38,9 @@ VALID_EXTENSIONS = ('jpg', 'json', 'pdf', 'png', 'svg')
 VALID_STYLES = ('nofunky', 'plain', 'scruffy')
 VALID_DIRS = ('LR', 'RL', 'TB')
 
+# yuml.me won't accept request URLs longer than this.
+MAX_URL_LENGTH = 4096
+
 
 def selected_or_all(view):
     '''
@@ -48,6 +52,18 @@ def selected_or_all(view):
         return view.substr(sublime.Region(0, view.size()))
 
     return '\n'.join([view.substr(region) for region in view.sel()])
+
+
+class YUMLError(Exception):
+    pass
+
+
+class RequestURITooLong(YUMLError):
+    max_length = MAX_URL_LENGTH
+
+    def __init__(self, message=None, url=None):
+        self.message = message
+        self.url = url
 
 
 class YumlCommand(sublime_plugin.TextCommand):
@@ -63,7 +79,20 @@ class YumlCommand(sublime_plugin.TextCommand):
                 'scale': settings.get('default_scale', DEFAULT_SCALE),
                 })
 
-        webbrowser.open_new_tab(yuml.url)
+        try:
+            webbrowser.open_new_tab(yuml.url)
+        except RequestURITooLong as ex:
+            message = (
+                "Sorry, but the diagram is too big.\n"
+                "\n"
+                "The URL is {} characters long and the longest request "
+                "supported by yUML is {} characters.\n"
+                "\n"
+                "To be fixed in a future release by posting instead of "
+                "getting."
+                .format(len(ex.url), ex.max_length))
+
+            sublime.error_message(message)
 
 
 class Yuml(object):
@@ -103,6 +132,14 @@ class Yuml(object):
 
     @property
     def url(self):
+        url = urllib.request.quote(
+            'http://yuml.me/diagram/{customisations.url}/{type}/{dsl}.{extension}'.format(
+                **self.__dict__))
+
+        print(len(url))
+        if len(url) >= MAX_URL_LENGTH:
+            raise RequestURITooLong('request too large to diagram', url)
+
         return 'http://yuml.me/diagram/{customisations.url}/{type}/{dsl}.{extension}'.format(**self.__dict__)
 
 
