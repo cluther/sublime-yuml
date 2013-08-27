@@ -1,0 +1,12 @@
+yUML 1.0.1 Changelog:
+
+This is a quick bugfix release to address an issue with fairly large diagrams
+failing to load.
+
+Bug Fixes
+ - Diagrams that encode to greater than yUML's GET limit of 4096 characters
+   now result in a much more obvious error about why the diagram fails to
+   draw.
+
+   I will be looking to remove this limitation by POSTing to yUML in a future
+   release.
