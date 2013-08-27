@@ -87,3 +87,12 @@ contain overrides of the following default settings.
 	"default_scale": "100",
 }
 ```
+
+
+Caveats
+=======
+
+It has come to my attention that diagrams that encode to URIs longer than 4096
+characters will not work. I've made a clear error message to indicate this is a
+problem in version 1.0.1, but am looking to switch to POST request instead of
+GET requests in a future version to supporter larger diagrams.
