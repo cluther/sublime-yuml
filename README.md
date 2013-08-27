@@ -32,14 +32,9 @@ Usage
 
 Syntax highlighting will automatically be done for files with a .yuml extension. For files with different extensions, you will have to set the syntax yourself.
 
-To open your diagram in your default browser, open the command palette with
-`super-shift-p` then search for `yuml diagram` and select *yUML: Open Diagram
-in Browser*.
+To open your diagram in your default browser, open the command palette with `super-shift-p` then search for `yuml diagram` and select *yUML: Open Diagram in Browser*.
 
-To change the diagram settings, open the command palette with `super-shift-p`
-then search for `yuml user` and select *Preferences: yUML Settings - User*.
-This will open your user settings for yUML. This is a JSON file which can
-contain overrides of the following default settings.
+To change the diagram settings, open the command palette with `super-shift-p` then search for `yuml user` and select *Preferences: yUML Settings - User*. This will open your user settings for yUML. This is a JSON file which can contain overrides of the following default settings.
 
 ```json
 {
@@ -92,7 +87,4 @@ contain overrides of the following default settings.
 Caveats
 =======
 
-It has come to my attention that diagrams that encode to URIs longer than 4096
-characters will not work. I've made a clear error message to indicate this is a
-problem in version 1.0.1, but am looking to switch to POST request instead of
-GET requests in a future version to supporter larger diagrams.
+It has come to my attention that diagrams that encode to URIs longer than 4096 characters will not work. I've made a clear error message to indicate this is a problem in version 1.0.1, but am looking to switch to POST request instead of GET requests in a future version to supporter larger diagrams.
