@@ -136,7 +136,6 @@ class Yuml(object):
             'http://yuml.me/diagram/{customisations.url}/{type}/{dsl}.{extension}'.format(
                 **self.__dict__))
 
-        print(len(url))
         if len(url) >= MAX_URL_LENGTH:
             raise RequestURITooLong('request too large to diagram', url)
 
