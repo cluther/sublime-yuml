@@ -21,6 +21,8 @@ It's makes it really easy for you to:
   presentations.
 '''
 
+__version__ = '1.0.2'
+
 import sublime
 import sublime_plugin
 import webbrowser
