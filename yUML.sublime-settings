@@ -40,5 +40,5 @@
 	 *   120 = Big
 	 *   180 = Huge
 	 */
-	"default_scale": "100",
+	"default_scale": "100"
 }

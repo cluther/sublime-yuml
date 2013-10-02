@@ -21,10 +21,18 @@ It's makes it really easy for you to:
   presentations.
 '''
 
+__version__ = '1.0.2'
+
 import sublime
 import sublime_plugin
-import urllib
 import webbrowser
+
+try:
+    # Python 3 & Sublime Text 3
+    from urllib.request import quote as url_quote
+except ImportError:
+    # Python 2 & Sublime Text 2
+    from urllib import quote as url_quote
 
 
 DEFAULT_TYPE = 'class'
@@ -132,11 +140,10 @@ class Yuml(object):
 
     @property
     def url(self):
-        url = urllib.request.quote(
+        url = url_quote(
             'http://yuml.me/diagram/{customisations.url}/{type}/{dsl}.{extension}'.format(
                 **self.__dict__))
 
-        print(len(url))
         if len(url) >= MAX_URL_LENGTH:
             raise RequestURITooLong('request too large to diagram', url)
 

@@ -1,0 +1,5 @@
+yUML 1.0.2 Changelog:
+
+Bug Fixes
+ - Now works in Sublime Text 2. This is a bug fix because support for ST2 was
+   previously declared even though it turns out that it didn't work.
