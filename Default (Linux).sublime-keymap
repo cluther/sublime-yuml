@@ -1,5 +1,13 @@
 [  
     {   
-        "keys": ["ctrl+b"], "command": "yuml"   
+    	"keys": ["ctrl+b"],
+    	"command": "yuml",
+    	"context": [
+      		{
+      			"key": "selector",
+      			"operator": "equal",
+      			"operand": "source.yuml"
+  			 }
+  		]
     }  
-]  
+]
