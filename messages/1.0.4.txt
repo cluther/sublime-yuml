@@ -1,0 +1,4 @@
+yUML 1.0.4 Changelog:
+
+Bug Fixes
+ - Fix super+b keybinding introduced in 1.0.3. It's now scoped to yuml docs.
