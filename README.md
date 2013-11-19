@@ -34,7 +34,7 @@ Syntax highlighting will automatically be done for files with a .yuml extension.
 
 To open your diagram in your default browser, open the command palette with `super-shift-p` then search for `yuml diagram` and select *yUML: Open Diagram in Browser*.
 
-Alternatively, you may use the keybinding *ctrl+b* (Windows and Linux) or *cmd+b* (OS X).
+Alternatively, you may use the keybinding `ctrl+b`.
 
 To change the diagram settings, open the command palette with `super-shift-p` then search for `yuml user` and select *Preferences: yUML Settings - User*. This will open your user settings for yUML. This is a JSON file which can contain overrides of the following default settings.
 
