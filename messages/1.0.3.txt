@@ -1,5 +1,5 @@
 yUML 1.0.3 Changelog:
 
-Bug Fixes
+Features
  - Add super+b keybinding to render current document in the default browser.
    Thanks to @patrickayoup.
