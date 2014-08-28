@@ -44,7 +44,7 @@ DEFAULT_SCALE = '100'
 VALID_TYPES = ('activity', 'class', 'usecase')
 VALID_EXTENSIONS = ('jpg', 'json', 'pdf', 'png', 'svg')
 VALID_STYLES = ('nofunky', 'plain', 'scruffy')
-VALID_DIRS = ('LR', 'RL', 'TB')
+VALID_DIRS = ('LR', 'RL', 'TB', 'BT')
 
 # yuml.me won't accept request URLs longer than this.
 MAX_URL_LENGTH = 4096
