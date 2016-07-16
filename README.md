@@ -13,12 +13,12 @@ There are currently only two (2) features, but they're the features you want.
 
 * Syntax highlighting for *.yuml files.
 ![Syntax Highlighting](https://raw.github.com/cluther/sublime-yuml/develop/images/syntax_highlighting.png)
+* Open Diagram in Browser
+* Open Class Diagram in Browser
+* Open Activity Diagram in Browser
+* Open Usecase Diagram in Browser 
 
-* Open image for diagram in browser  
-* Open Class Diagram in Browser  
-* Open Activity Diagram in Browser  
-* Open Usecase Diagram in Browser  
-![Open Diagram in Browser](https://raw.github.com/cluther/sublime-yuml/develop/images/open_diagram_in_browser.png)
+![Open Diagram in Browser](https://raw.githubusercontent.com/oscarmorrison/sublime-yuml/develop/images/open_diagram_in_browser.png)
 
 
 
@@ -90,7 +90,7 @@ To change the diagram settings, open the command palette with `super-shift-p` th
 }
 ```
 
-*Additional Commands*
+**Additional Commands**  
 If you would prefer not to set a default setting each time you create a diagram, you may simply use one of the following three commands.  
 * Open Class Diagram in Browser  
 * Open Activity Diagram in Browser  
