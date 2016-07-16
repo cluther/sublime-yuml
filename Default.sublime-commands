@@ -3,8 +3,8 @@
     "command": "yuml",
 },
 {
-	"caption": "yUML: Open Class Diagram in Browser",
-	"command": "yuml",
+    "caption": "yUML: Open Class Diagram in Browser",
+    "command": "yuml",
     "args": {
         "contents": "class"
     }
