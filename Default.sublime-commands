@@ -1,17 +1,27 @@
 [{
+    "caption": "yUML: Open Diagram in Browser",
+    "command": "yuml",
+},
+{
 	"caption": "yUML: Open Class Diagram in Browser",
 	"command": "yuml",
-    "args": {   "type": "class" }
+    "args": {
+        "contents": "class"
+    }
 },
 {
     "caption": "yUML: Open Activity Diagram in Browser",
     "command": "yuml",
-    "args": {   "type": "activity" }
+    "args": {
+        "contents": "activity"
+    }
 },
 {
-    "caption": "yUML: Open UsecaseDiagram in Browser",
+    "caption": "yUML: Open Usecase Diagram in Browser",
     "command": "yuml",
-    "args": {   "type": "usecase" }
+    "args": {
+        "contents": "usecase"
+    }
 },{
     "caption": "Preferences: yUML Settings – Default",
     "command": "open_file", "args":
