@@ -21,7 +21,7 @@ It's makes it really easy for you to:
   presentations.
 '''
 
-__version__ = '1.0.4'
+__version__ = '1.0.5'
 
 import sublime
 import sublime_plugin
@@ -44,7 +44,7 @@ DEFAULT_SCALE = '100'
 VALID_TYPES = ('activity', 'class', 'usecase')
 VALID_EXTENSIONS = ('jpg', 'json', 'pdf', 'png', 'svg')
 VALID_STYLES = ('nofunky', 'plain', 'scruffy')
-VALID_DIRS = ('LR', 'RL', 'TB')
+VALID_DIRS = ('LR', 'RL', 'TB', 'BT')
 
 # yuml.me won't accept request URLs longer than this.
 MAX_URL_LENGTH = 4096
@@ -75,11 +75,12 @@ class RequestURITooLong(YUMLError):
 
 
 class YumlCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        settings = self.view.settings()
+    def run(self, edit, **args):
+        settings = sublime.load_settings('yUML.sublime-settings')
+        type = args.get('contents', settings.get('default_type', DEFAULT_TYPE))
         yuml = Yuml(
             dsl=selected_or_all(self.view),
-            type=settings.get('default_type', DEFAULT_TYPE),
+            type=type,
             extension=settings.get('default_extension', DEFAULT_EXTENSION),
             customisations={
                 'style': settings.get('default_style', DEFAULT_STYLE),

@@ -1,0 +1,24 @@
+(               // meta.class.yuml
+(\\[)           // punctuation.definition.string.begin
+([^\\{\\]]+)    // entity.name.type.class.yuml
+(               // meta.style.yuml
+(\\{)           // punctuation.section.property-list.css
+([^\\:]+)       // meta.property-name.css
+(\\:)           // punctuation.separator.key-value.css
+([^\\}]+)       // meta.property-value.css
+(\\})           // punctuation.section.property-list.css
+)?              // 
+(\\])           // punctuation.definition.string.end
+)               // 
+
+((\\[)([^\\{\\]]+)((\\{)([^\\:]+)(\\:)([^\\}]+)(\\}))?(\\]))
+
+###
+
+(                       // meta.association.yuml
+([<>\\*+\\^\\d\\.]*)    // keyword.operator.class.yuml
+([\\.\\-]+)             // keyword.yuml
+([<>\\*+\\^\\d\\.]*)    // keyword.operator.class.yuml
+)
+
+(([<>\\*+\\^\\d\\.]*)([\\.\\-]+)([<>\\*+\\^\\d\\.]*))

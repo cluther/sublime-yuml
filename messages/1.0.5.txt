@@ -1,0 +1,9 @@
+yUML 1.0.5 Changelog:
+
+Features
+ - Add specific "Open (Class|Activity|Use Case) Diagram in Browser" commands.
+   Thanks to @oscarmorrison.
+
+Bug Fixes
+ - Fix loading of yUML.sublime-settings. Not sure when this broke.
+   Thanks to @oscarmorrison.
