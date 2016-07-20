@@ -76,7 +76,7 @@ class RequestURITooLong(YUMLError):
 
 class YumlCommand(sublime_plugin.TextCommand):
     def run(self, edit, **args):
-        settings = self.view.settings()
+        settings = sublime.load_settings('yUML.sublime-settings')
         type = args.get('contents', settings.get('default_type', DEFAULT_TYPE))
         yuml = Yuml(
             dsl=selected_or_all(self.view),
