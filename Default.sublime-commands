@@ -17,7 +17,7 @@
     }
 },
 {
-    "caption": "yUML: Open Usecase Diagram in Browser",
+    "caption": "yUML: Open Use Case Diagram in Browser",
     "command": "yuml",
     "args": {
         "contents": "usecase"

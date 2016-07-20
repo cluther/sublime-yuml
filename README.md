@@ -1,30 +1,22 @@
-yUML for Sublime Text
-=====================
+# yUML for Sublime Text
 
 Makes using [yUML](http://yuml.me/) from Sublime Text easier. Making two great tools better by making them work together.
 
 Sublime Text 2 and 3 on all platforms should be supported.
 
 
-Features
-========
+## Features
 
-There are currently only two (2) features, but they're the features you want.
+There are currently only two features, but they're the features you want.
 
-* Syntax highlighting for *.yuml files.
-![Syntax Highlighting](https://raw.github.com/cluther/sublime-yuml/develop/images/syntax_highlighting.png)
-* Open Diagram in Browser
-* Open Class Diagram in Browser
-* Open Activity Diagram in Browser
-* Open Usecase Diagram in Browser 
+1. Syntax highlighting for *.yuml files.
+   ![Syntax Highlighting](https://github.com/cluther/sublime-yuml/raw/develop/images/syntax_highlighting.png)
 
-![Open Diagram in Browser](https://raw.githubusercontent.com/oscarmorrison/sublime-yuml/develop/images/open_diagram_in_browser.png)
+2. Opening Diagrams in Browser
+   ![Open Diagram in Browser](https://github.com/cluther/sublime-yuml/raw/develop/images/open_diagram_in_browser.png)
 
 
-
-
-Install
-=======
+## Install
 
 Please use [Package Control](https://sublime.wbond.net/). You'll be happier that way unless you plan on hacking on the code.
 
@@ -32,8 +24,7 @@ Please use [Package Control](https://sublime.wbond.net/). You'll be happier that
 2. Install "yUML"
 
 
-Usage
-=====
+## Usage
 
 Syntax highlighting will automatically be done for files with a .yuml extension. For files with different extensions, you will have to set the syntax yourself.
 
@@ -71,8 +62,9 @@ To change the diagram settings, open the command palette with `super-shift-p` th
 	 *
 	 * Valid options:
 	 *   LR = Left-to-right
-	 *   TB = Top-to-bottom
 	 *   RL = Right-to-left
+	 *   TB = Top-to-bottom
+	 *   BT = Bottom-to-top
 	 */
 	"default_dir": "LR",
 
@@ -90,13 +82,14 @@ To change the diagram settings, open the command palette with `super-shift-p` th
 }
 ```
 
-**Additional Commands**  
+### Additional Commands
+
 If you would prefer not to set a default setting each time you create a diagram, you may simply use one of the following three commands.  
+
 * Open Class Diagram in Browser  
 * Open Activity Diagram in Browser  
-* Open Usecase Diagram in Browser  
+* Open Use Case Diagram in Browser  
 
-Caveats
-=======
+## Caveats
 
 It has come to my attention that diagrams that encode to URIs longer than 4096 characters will not work. I've made a clear error message to indicate this is a problem in version 1.0.1, but am looking to switch to POST request instead of GET requests in a future version to supporter larger diagrams.
